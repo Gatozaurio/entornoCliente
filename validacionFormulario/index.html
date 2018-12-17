@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="es_ES">
+    <meta charset="UTF-8">
+    <title>VALIDACION FORMULARIO</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="eventos.js" cache="false" defer></script>
+</head>
+<body>
+    <div id="formularioProyecto">
+        <h2>FORMULARIO DEL PROYECTO</h2>
+        <form id="formulario" action="correcto.html" method="POST">
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="nombreProyecto" >Nombre Proyecto:</label>
+            </div>
+            <!-- Primera forma de asociar eventos. Desde el HTML-->
+            <input id="nombreProyecto" type="text"/>
+        </div>
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="duracion" >Duración:</label>
+            </div>
+            <input id="duracion" type="text"/>
+        </div>
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="jefe">Jefe Proyecto:</label>
+            </div>
+            <input id="jefe" type="text"/>
+        </div>
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="tipo">Tipo Proyecto:</label>
+            </div>
+            <input id="tipo" type="select"/>
+        </div>
+        <div class="botones">
+            <button >Enviar</button>
+        </div>
+        </form>
+    </div>
+
+</body>
+</html>
