@@ -1,0 +1,51 @@
+.filtro {
+  border-radius: 5px;
+  background-color: #FF9900;
+  
+}
+.filtro:focus{
+  background-color: #FF6600;
+}
+
+.proyecto {
+  border: 5px inset #FF9900;
+  padding: 1%;
+  margin: 1%;
+  width: 27%;
+  text-align: center;
+  box-shadow: 10px 10px 50%;
+}
+.proyecto:hover{
+  animation-name: shake;
+  animation-duration: 1s;
+}
+@keyframes shake{
+  0%   {transform: translateY(20px);}
+  25%  {transform: translateY(-20px);}
+  50%  {transform: translateY(20px);}
+}
+@media (max-width: 770px) {
+  .proyecto{
+    width: 43%;
+  }
+}
+@media (max-width: 410px) {
+  .proyecto{
+    width: 90%;
+  }
+  .flexContainer{
+    flex-direction: column;
+  }
+}
+@media (max-width: 290px) {
+  .proyecto{
+    width: 70%;
+  }
+}
+
+.proyecto img {
+  object-fit: fill;
+  width: 100%;
+  height: 350px;
+  
+}

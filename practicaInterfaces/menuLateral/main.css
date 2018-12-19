@@ -1,0 +1,68 @@
+/* GRIDS */
+body, header, aside, main, footer{
+    display: grid;
+}
+
+/* LETRA */
+.header a, .footer p{
+    font-family: Arial, sans-serif;
+}
+
+/* CONTENEDORES DE FLEXBOX */
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-main{
+    display:flex;
+}
+/* HEADER */
+.header{
+    display: grid;
+    width: 30vh;
+    background-color: #252525;
+}
+.logo a{
+    font-size: 180%;
+}
+.menuHeader{
+    display: flex;
+    flex-direction: column;
+}
+.menuHeader a:link{
+    width: 20%;
+    font-size: 130%;
+    text-align: center;
+}
+.menuHeader a:hover{
+    width: 20%;
+    font-size: 140%;
+    color: #FF6600;
+}
+.menuHeader a, .logo a, .footer p{
+    color: #FF9900;
+    text-decoration: none;
+}
+.header nav{
+    display: grid;
+    grid-column: 7/13;
+}
+
+
+/* MAIN */
+.main{
+    height: 90vh;
+    min-height:90vh;
+    background-color: #515151;
+}
+
+/* FOOTER */
+.footer{
+    height: 10vh;
+    background-color: #252525;
+    text-align: center;
+}
+.footer p{
+    margin-top: 1%;
+    font-size: 110%;
+}

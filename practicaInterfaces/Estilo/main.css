@@ -1,0 +1,117 @@
+/* GRIDS */
+body, header, aside, main, footer {
+  display: grid;
+}
+
+/* LETRAS */
+.header a, .footer h1, .titulo, .proyecto {
+  font-family: Arial, sans-serif;
+}
+@font-face {
+  font-family: "dekers";
+  src: url(fuentes/Dekers_Bold.ttf);
+}
+
+/* CONTENEDORES DE FLEXBOX */
+.flexContainer {
+  display: flex;
+  
+    flex-wrap: wrap;
+}
+
+/* HEADER */
+.header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height: 10vh;
+  background-color: #252525;
+}
+
+.logo {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 180%;
+}
+
+.menuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuHeader a:link {
+  width: 20%;
+  font-size: 130%;
+  text-align: center;
+}
+
+.menuHeader a:visited {
+  width: 20%;
+  font-size: 110%;
+  text-align: center;
+}
+
+.menuHeader a:hover {
+  width: 20%;
+  font-size: 140%;
+  color: #FF6600;
+}
+.menuHeader a:active {
+  width: 20%;
+  font-size: 130%;
+  color: #0A0A09;
+}
+
+.menuHeader a, .logo a, .footer h1 {
+  color: #FF9900;
+  text-decoration: none;
+}
+
+.header nav {
+  display: grid;
+  grid-column: 7/13;
+}
+
+/* MAIN */
+.main {
+  height: 100%;
+  min-height: 80vh;
+  background-color: #515151;
+}
+.alinear{
+  text-align: center;
+}
+.titulo {
+  font-family: "dekers";
+  font-size: 300%;
+  padding-top: 1%;
+}
+
+
+
+
+/* FOOTER */
+.footer {
+  min-height: 10vh;
+  background-color: #252525;
+  text-align: center;
+}
+
+.footer h1 {
+  margin-top: 1%;
+  font-size: 110%;
+}
+
+.footer p {
+  margin: 1%;
+  text-align: justify; 
+  column-count: 5;
+  column-gap: 5%;
+}
+
+/*# sourceMappingURL=main.css.map */
