@@ -20,3 +20,12 @@ function crearInput(){
         }
     );
 }
+
+function aplicarFiltro(entrada){
+    let divPadre = document.createElement('div');
+    divPadre.class = 'padre';
+    let h1titulo = document.createElement('h1');
+    h1titulo.append('Filtrado de equipos.');
+    divPadre.appendChild(h1titulo);
+    document.body.appendChild(divPadre);
+}
