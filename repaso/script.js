@@ -21,11 +21,22 @@ function crearInput(){
     );
 }
 
-function aplicarFiltro(entrada){
+function aplicarFiltro(valor){
     let divPadre = document.createElement('div');
-    divPadre.class = 'padre';
     let h1titulo = document.createElement('h1');
-    h1titulo.append('Filtrado de equipos.');
+    h1titulo.innerHTML = 'Equipos filtrados';
     divPadre.appendChild(h1titulo);
+    todasLasLigas.forEach(liga =>
+        liga.equipos.forEach(equipo => mostrarEquipo(equipo, divPadre, valor)
+        )
+    )
     document.body.appendChild(divPadre);
+}
+
+function mostrarEquipo(equipo, div, valor){
+    if(equipo.nombre.includes(valor)){
+        let div2= document.createElement(div);
+        div2.innerHTML = equipo.nombre;
+        div.appendChild(div2);
+    }
 }
