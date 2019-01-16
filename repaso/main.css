@@ -1,0 +1,6 @@
+.inputCorrecto{
+ border: solid 1px green;
+}
+.inputIncorrecto{
+    border: solid 1px red;
+}

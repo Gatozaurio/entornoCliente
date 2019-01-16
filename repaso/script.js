@@ -19,6 +19,11 @@ function crearInput(){
             aplicarFiltro(valor);
         }
     );
+    input.addEventListener('blur',function(event){
+        let valor = event.target.value;
+        valor = valor.trim();
+        validarInput(input, valor);
+    });
 }
 
 function aplicarFiltro(valor){
@@ -35,8 +40,35 @@ function aplicarFiltro(valor){
 
 function mostrarEquipo(equipo, div, valor){
     if(equipo.nombre.includes(valor)){
-        let div2= document.createElement(div);
+        let div2= document.createElement('div');
         div2.innerHTML = equipo.nombre;
         div.appendChild(div2);
+    }
+}
+
+function validarInput(input, valor){
+    let expr1 = /^[A-Za-z]+$/;
+    let expr2 = /^[A-Z]+$/;
+    let esCorrectoTodoLetras = expr1.test(valor);
+    let esCorrectoSoloMay = expr2.test(valor);
+    let esCorrectoTam = valor.length >= 5;
+    let divConErrores = document.getElementById('divErroresInput');
+    if(divConErrores == null){
+        divConErrores = document.createElement('div');
+        divConErrores.id = 'divErroresInput';
+    }else{
+        divConErrores.innerHTML = '';
+    }
+    input.nextElementSibling = divConErrores;
+    if(esCorrectoTodoLetras){
+        let span = document.createElement('span');
+        span.innerHTML = 'Solo se permiten letras';
+        divConErrores.appendChild(span);
+    }
+    // resetearEstiloInput();
+    if(esCorrectoTodoLetras && esCorrectoSoloMay && esCorrectoTam){
+        input.classList.add('inputCorrecto');
+    }else{
+        input.classList.add('inputIncorrecto');
     }
 }
