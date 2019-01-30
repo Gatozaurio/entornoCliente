@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ejemplo Ajax</title>
+	<link rel="stylesheet" href="/05/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="/05/script.js" defer></script>
+</head>
+
+<body>
+<div id="spinner" class="spinner">
+	<div class="dot1"></div>
+	<div class="dot2"></div>
+</div>
+
+<div>
+    <h1>FORMULARIO ASÍNCRONO</h1>
+
+    <form id="formulario" action="http://www.google.es" method="POST">
+		<div>
+			<label for="numero1">Primer número</label>
+			<input type="text" id="numero1" name="numero1">
+			<div class="divErrores">
+
+			</div>
+		</div>
+
+		<div>
+			<label for="numero2">Segundo número</label>
+			<input type="text" id="numero2" name="numero2">
+			<div class="divErrores">
+
+			</div>
+		</div>
+
+		<input type="submit" value="enviar" id="boton">
+	</form>
+	<div id="resultado">
+	</div>
+</div>
+</body>
+</html>
